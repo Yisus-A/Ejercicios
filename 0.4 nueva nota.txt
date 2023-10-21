@@ -1,0 +1,19 @@
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+server-->browser: HTML-code
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+server-->browser: main.js
+
+nota sobre el navegador:
+el navegador comienza a ejecutar código js
+que solicita datos JSON al servidor 
+fin de la nota
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: [{ content: "Diagrama", date: "2023-10-21T17:56:44.630Z" }, ...]
+
+note over browser:
+el navegador ejecuta el controlador de eventos
+y muestra la nota guardada
+fin de la nota
